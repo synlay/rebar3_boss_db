@@ -8,8 +8,8 @@ Build
 
     $ rebar3 compile
 
-Use
----
+Usage
+-----
 
 Add the plugin to your rebar config:
 
@@ -24,3 +24,9 @@ Then just call your plugin directly in an existing application:
     ===> Fetching rebar3_boss_db
     ===> Compiling rebar3_boss_db
     <Plugin Output>
+
+The `boss_db` model compile function is located under the namespace `boss_db`. To automatically compile `boss_db` models before the normal compilation process, add a `pre` hook to your rebar.config:
+
+    {provider_hooks, [
+        {pre, [{compile, {boss_db, compile}}]}
+    ]}.
