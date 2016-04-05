@@ -77,7 +77,7 @@ option(Opt, BossDbOpts) ->
 
 option_default(model_dir) -> "src/model";
 option_default(out_dir)  -> "ebin";
-option_default(source_ext) -> ".erl";
+option_default(source_ext) -> ".boss";
 option_default(recursive) -> false;
 option_default(compiler_options) -> [verbose, return_errors].
 
